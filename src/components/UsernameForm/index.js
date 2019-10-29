@@ -49,9 +49,9 @@ class UsernameForm extends Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    const username = this.state.username;
+    const username = this.state.username.trim();
 
-    if (username.trim().length === 0) {
+    if (username.length === 0) {
       return;
     }
     const userUrl = this.getUserUrl(username);
